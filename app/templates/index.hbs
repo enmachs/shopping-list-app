@@ -1,3 +1,7 @@
-<h1 class="love">Index view - List of my wishlists</h1>
+<h1 class="l-green">Index view - List of my wishlists</h1>
 
-<pre>{{@model}}</pre>
+<div class="wishlist-list">
+  {{#each @model as |wishlist|}}
+    <Wishlist @wishlist={{wishlist}}/>
+  {{/each}}
+</div>

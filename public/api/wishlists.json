@@ -5,14 +5,27 @@
       "uuid": "abc-123",
       "name": "First wishlist",
       "description": "",
-      "due_date": "2020-08-25"
+      "due_date": "2020-08-25",
+      "place": "BestBuy",
+      "status": "active"
     },
     {
       "id": "2",
       "uuid": "abc-456",
       "name": "Second wishlist",
       "description": "",
-      "due_date": "2020-09-25"
+      "due_date": "2020-09-25",
+      "place": "Amazon",
+      "status": "cancelled"
+    },
+    {
+      "id": "3",
+      "uuid": "abc-789",
+      "name": "Fav things",
+      "description": "",
+      "due_date": "2020-08-30",
+      "place": "Apple",
+      "status": "completed"
     }
   ]
 }
