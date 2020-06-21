@@ -3,8 +3,8 @@
     {
       "id": "1",
       "uuid": "abc-123",
-      "name": "First wishlist",
-      "description": "",
+      "name": "speakers and wireless things",
+      "description": "All items listed here are there for only listening to and enjoying audio",
       "due_date": "2020-08-25",
       "place": "BestBuy",
       "status": "active"
@@ -12,7 +12,7 @@
     {
       "id": "2",
       "uuid": "abc-456",
-      "name": "Second wishlist",
+      "name": "workout items",
       "description": "",
       "due_date": "2020-09-25",
       "place": "Amazon",
@@ -21,7 +21,7 @@
     {
       "id": "3",
       "uuid": "abc-789",
-      "name": "Fav things",
+      "name": "tech gadgets for nice devs",
       "description": "",
       "due_date": "2020-08-30",
       "place": "Apple",
