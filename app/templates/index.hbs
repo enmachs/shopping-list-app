@@ -1,7 +1,7 @@
-<h1 class="l-green">List of my wishlists</h1>
+<h1 class="l-green">Shopping lists</h1>
 
-<div class="wishlist-list">
-  {{#each @model as |wishlist|}}
-    <Wishlist @wishlist={{wishlist}}/>
+<div class="shopping-lists">
+  {{#each @model as |shopping_list|}}
+    <ShoppingList @shopping_list={{shopping_list}}/>
   {{/each}}
 </div>

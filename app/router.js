@@ -7,5 +7,5 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('wishlist', { path: '/wl/:uuid' });
+  this.route('shopping-list', { path: '/sl/:uuid' });
 });

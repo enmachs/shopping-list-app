@@ -1,0 +1,23 @@
+<div class="card shopping-list sl-{{@shopping_list.uuid}}">
+  <LinkTo @route='shopping-list' @model={{@shopping_list}}>
+    <div class="sl-name">
+      <h3>{{@shopping_list.name}}</h3>
+    </div>
+  </LinkTo>
+
+  <div class="sl-attributes">
+    <p class="sl-attributes_items">3 items</p>
+
+    <div class="vertical-divider"></div>
+
+    <p class="sl-attributes_due_date">due at {{@shopping_list.due_date}}</p>
+
+    <div class="vertical-divider"></div>
+
+    <p class="sl-attributes_place">{{@shopping_list.place}}</p>
+
+    <div class="vertical-divider"></div>
+
+    <span class="badge sl-attributes_status {{@shopping_list.status}}">{{@shopping_list.status}}</span>
+  </div>
+</div>
