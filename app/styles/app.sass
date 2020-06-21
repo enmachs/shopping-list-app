@@ -1,0 +1,66 @@
+@mixin font-face($name)
+  @font-face
+    font-family: $name
+    src:  url("/fonts/#{$name}.ttf") format("truetype")
+
+@include font-face('Nunito-Black')
+@include font-face('Nunito-ExtraLight')
+
+body
+  font-family: 'Nunito-ExtraLight'
+
+h1
+  font-family: 'Nunito-Black'
+  &.l-green
+    color: lightgreen
+
+.layout
+  padding: 30px 80px
+
+.wishlist-list
+
+
+.wishlist
+  // border: 1px solid lightgray
+  padding: 10px
+  margin: 10px 0
+  display: flex
+  box-shadow: 0px 6px 12px 1px #efefef
+  border-radius: 5px
+  align-items: center
+
+.wl-name
+  color: #252525
+  margin: 0 15px
+  min-width: 200px
+
+.wl-attributes
+  color: #9b9b9b
+  display: flex
+  align-items: center
+
+.active
+  background-color: lightgreen
+
+.cancelled
+  background-color: #ff00008a
+
+.completed
+  background-color: #0000ff8a
+
+.badge
+  padding: 5px
+  color: white
+  border-radius: 5px
+
+.vertical-divider
+  position: relative
+  margin: 0 10px
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    width: 1px
+    height: 30px
+    background: #dfdfdf
+    transform: translateY(-50%)
