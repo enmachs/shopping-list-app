@@ -4,12 +4,18 @@
   </div>
 
   <div class="wl-attributes">
-    <p>3 items</p>
+    <p class="wl-attributes_items">3 items</p>
+
     <div class="vertical-divider"></div>
-    <p>due at {{@wishlist.due_date}}</p>
+
+    <p class="wl-attributes_due_date">due at {{@wishlist.due_date}}</p>
+
     <div class="vertical-divider"></div>
-    <p>{{@wishlist.place}}</p>
+
+    <p class="wl-attributes_place">{{@wishlist.place}}</p>
+
     <div class="vertical-divider"></div>
-    <span class="badge {{@wishlist.status}}">{{@wishlist.status}}</span>
+
+    <span class="badge wl-attributes_status {{@wishlist.status}}">{{@wishlist.status}}</span>
   </div>
 </div>

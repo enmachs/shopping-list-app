@@ -6,21 +6,49 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | wishlist', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  hooks.beforeEach(function() {
+    this.setProperties({
+      wishlist: {
+        id: "1",
+        uuid: "abc-123",
+        name: "First wishlist",
+        description: "",
+        due_date: "2020-08-25",
+        place: "BestBuy",
+        status: "active"
+      }
+    });
+  });
 
-    await render(hbs`<Wishlist />`);
+  test('it renders wishlist properly', async function(assert) {
+    await render(hbs`<Wishlist @wishlist={{this.wishlist}}/>`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    // Class including uuid of element
+    assert.dom('.wishlist').exists();
+    assert.dom('.wishlist').hasClass("wl-abc-123");
 
-    // Template block usage:
-    await render(hbs`
-      <Wishlist>
-        template block text
-      </Wishlist>
-    `);
+    // Name
+    assert.dom('.wishlist .wl-name').exists();
+    assert.dom('.wishlist .wl-name').containsText('First wishlist');
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    // Attributes
+    assert.dom('.wishlist .wl-attributes').exists();
+
+    // Attributes - Items number
+    assert.dom('.wishlist .wl-attributes .wl-attributes_items').exists();
+    assert.dom('.wishlist .wl-attributes .wl-attributes_items').containsText('3 items');
+
+    // Attributes - Due Date
+    assert.dom('.wishlist .wl-attributes .wl-attributes_due_date').exists();
+    assert.dom('.wishlist .wl-attributes .wl-attributes_due_date').containsText('due at 2020-08-25');
+
+    // Attributes - Place
+    assert.dom('.wishlist .wl-attributes .wl-attributes_place').exists();
+    assert.dom('.wishlist .wl-attributes .wl-attributes_place').containsText('BestBuy');
+
+    // Attributes - Status
+    assert.dom('.wishlist .wl-attributes .wl-attributes_status.badge').exists();
+    assert.dom('.wishlist .wl-attributes .wl-attributes_status.badge').hasClass('active');
+    assert.dom('.wishlist .wl-attributes .wl-attributes_status').containsText('active');
   });
 });
