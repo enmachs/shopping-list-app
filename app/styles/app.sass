@@ -14,16 +14,31 @@ h1
   &.l-green
     color: lightgreen
 
+h4
+  &.subtitle
+    margin:
+      bottom: 0
+
+p
+  &.subtitle_content
+    margin:
+      top: 0
+
+a, a:hover
+  text-decoration: none
+
+
 .layout
   padding: 30px 80px
 
-.wishlist
-  // border: 1px solid lightgray
+.card
   padding: 10px
   margin: 10px 0
-  display: flex
   box-shadow: 0px 6px 12px 1px #efefef
   border-radius: 5px
+
+.wishlist
+  display: flex
   align-items: center
 
 .wl-name
@@ -61,3 +76,19 @@ h1
     height: 30px
     background: #dfdfdf
     transform: translateY(-50%)
+
+.wl-show
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 30px
+
+.wl-details
+  position: relative
+
+.wl-details_description
+  width: 85%
+
+.wl-details_status
+  position: absolute
+  right: 10px
+  top: 25px

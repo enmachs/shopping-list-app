@@ -1,7 +1,9 @@
-<div class="wishlist wl-{{@wishlist.uuid}}">
-  <div class="wl-name">
-    <h3>{{@wishlist.name}}</h3>
-  </div>
+<div class="card wishlist wl-{{@wishlist.uuid}}">
+  <LinkTo @route='wishlist' @model={{@wishlist}}>
+    <div class="wl-name">
+      <h3>{{@wishlist.name}}</h3>
+    </div>
+  </LinkTo>
 
   <div class="wl-attributes">
     <p class="wl-attributes_items">3 items</p>
